@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="fr">
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src chrome:; object-src 'none'" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Erreur de chargement de la page</title>
+    <link rel="stylesheet" href="chrome://browser/skin/aboutNetError.css" type="text/css" media="all" />
+    <link rel="icon" id="favicon" href="chrome://global/skin/icons/info.svg" />
+    <link rel="localization" href="browser/aboutCertError.ftl" />
+    <link rel="localization" href="browser/nsserrors.ftl" />
+    <link rel="localization" href="branding/brand.ftl" />
+  </head>
+
+  <body dir="ltr" class="neterror">
+    <!-- ERROR ITEM CONTAINER (removed during loading to avoid bug 39098) -->
+    
+
+    <!-- PAGE CONTAINER (for styling purposes only) -->
+    <div id="errorPageContainer" class="container">
+      <div id="text-container">
+        <!-- Error Title -->
+        <div class="title">
+          <h1 class="title-text" data-l10n-id="csp-xfo-error-title">Firefox ne peut pas ouvrir cette page</h1>
+        </div>
+
+        <!-- LONG CONTENT (the section most likely to require scrolling) -->
+        <div id="errorLongContent">
+
+          <!-- Short Description -->
+          <div id="errorShortDesc" style="display: none;">
+            <p id="errorShortDescText" data-l10n-id="ssl-connection-error" data-l10n-args="{&quot;errorMessage&quot;:&quot;&quot;,&quot;hostname&quot;:&quot;translate.google.com&quot;}">Une erreur est survenue pendant une connexion à translate.google.com. </p>
+          </div>
+
+          <div id="errorShortDesc2">
+              <p id="errorShortDescText2"></p>
+          </div>
+
+          <div id="errorWhatToDoTitle">
+              <p id="errorWhatToDoTitleText"></p>
+          </div>
+
+          <div id="errorWhatToDo">
+              <p id="badStsCertExplanation" hidden="true"><span class="hostname"></span>
+ a recours à une stratégie de sécurité HTTP Strict Transport Security 
+(HSTS), une connexion sécurisée est obligatoire pour y accéder. Vous ne 
+pouvez pas ajouter d’exception pour visiter ce site.</p>
+              <p id="errorWhatToDoText"></p>
+          </div>
+
+          <div id="errorWhatToDo2">
+              <p id="errorWhatToDoText2"></p>
+              <p id="badStsCertExplanation" hidden="true"><span class="hostname"></span>
+ a recours à une stratégie de sécurité HTTP Strict Transport Security 
+(HSTS), une connexion sécurisée est obligatoire pour y accéder. Vous ne 
+pouvez pas ajouter d’exception pour visiter ce site.</p>
+          </div>
+
+          <!-- Long Description (Note: See netError.dtd for used XHTML tags) -->
+          <div id="errorLongDesc" data-l10n-id="csp-xfo-blocked-long-desc" data-l10n-args="{&quot;hostname&quot;:&quot;translate.google.com&quot;}">Pour
+ protéger votre sécurité, translate.google.com ne permettra pas à 
+Firefox d’afficher la page si celle-ci est intégrée par un autre site. 
+Pour voir cette page, vous devez l’ouvrir dans une nouvelle fenêtre.</div>
+
+          <div id="tlsVersionNotice" hidden="true">
+            <p data-l10n-id="cert-error-old-tls-version">Ce site web ne prend peut-être pas en charge le protocole TLS 1.2, version minimale prise en charge par Firefox.</p>
+          </div>
+
+          <div id="learnMoreContainer" style="display: block;">
+            <p><a id="learnMoreLink" target="_blank" rel="noopener noreferrer" data-telemetry-id="learn_more_link" href="https://support.mozilla.org/1/firefox/98.0.1/Darwin/fr/xframe-neterror-page">En savoir plus…</a></p>
+          </div>
+
+          <div id="openInNewWindowContainer" class="button-container" style="display: block;">
+            <p><a id="openInNewWindowButton" target="_blank" rel="noopener noreferrer" href="https://translate.google.com/websitetranslationui?parent=https%3A%2F%2F1-ws--fe-assoc--amazon-com.translate.goog&amp;pfu=https%3A%2F%2F1-ws--fe-assoc--amazon-com.translate.goog%2Fwidgets%2Fcm%3Ft%3Dgid023014-22%26o%3D9%26p%3D8%26l%3Das1%26asins%3DB000KF7QU2%26ref%3Dqf_sp_asin_til%26fc1%3D000000%26IS2%3D1%26lt1%3D_blank%26m%3Damazon%26lc1%3D0000FF%26bc1%3D000000%26bg1%3DFFFFFF%26f%3Difr%26_x_tr_enc%3D1%26_x_tr_sl%3Dja%26_x_tr_tl%3Den%26_x_tr_hl%3Den&amp;u=https%3A%2F%2Fws-fe.assoc-amazon.com%2Fwidgets%2Fcm%3Ft%3Dgid023014-22%26o%3D9%26p%3D8%26l%3Das1%26asins%3DB000KF7QU2%26ref%3Dqf_sp_asin_til%26fc1%3D000000%26IS2%3D1%26lt1%3D_blank%26m%3Damazon%26lc1%3D0000FF%26bc1%3D000000%26bg1%3DFFFFFF%26f%3Difr&amp;sl=ja&amp;tl=en&amp;opu=https%3A%2F%2Ftranslate.google.com%2Fwebsite%3Fsl%3Dja%26tl%3Den%26hl%3Den%26u%3Dhttps%3A%2F%2Fws-fe.assoc-amazon.com%2Fwidgets%2Fcm%3Ft%253Dgid023014-22%2526o%253D9%2526p%253D8%2526l%253Das1%2526asins%253DB000KF7QU2%2526ref%253Dqf_sp_asin_til%2526fc1%253D000000%2526IS2%253D1%2526lt1%253D_blank%2526m%253Damazon%2526lc1%253D0000FF%2526bc1%253D000000%2526bg1%253DFFFFFF%2526f%253Difr%26anno%3D2&amp;hl=en">
+            <button class="primary" data-l10n-id="open-in-new-window-for-csp-or-xfo-error">Ouvrir le site dans une nouvelle fenêtre</button></a></p>
+          </div>
+        </div>
+
+        <!-- UI for option to report certificate errors to Mozilla. Removed on
+             init for other error types .-->
+        <div id="prefChangeContainer" class="button-container">
+          <p>Ce problème semble être provoqué par vos paramètres de sécurité réseau. Voulez-vous restaurer les paramètres par défaut ?</p>
+          <button id="prefResetButton" class="primary">Restaurer les paramètres par défaut</button>
+        </div>
+
+        <div id="certErrorAndCaptivePortalButtonContainer" class="button-container">
+          <button id="returnButton" class="primary" data-telemetry-id="return_button_top">Retour (recommandé)</button>
+          <button id="openPortalLoginPageButton" class="primary">Ouvrir la page de connexion du réseau</button>
+          <button class="primary try-again">Réessayer</button>
+          <button id="advancedButton" data-telemetry-id="advanced_button">Avancé…</button>
+        </div>
+      </div>
+
+      <div id="netErrorButtonContainer" class="button-container" style="display: none;">
+        <button class="primary try-again">Réessayer</button>
+      </div>
+
+      <div id="advancedPanelContainer">
+        <div id="badCertAdvancedPanel" class="advanced-panel" hidden="">
+          <p id="badCertTechnicalInfo"></p>
+          <a id="viewCertificate" href="javascript:void(0)">Afficher le certificat</a>
+          <div id="advancedPanelButtonContainer" class="button-container">
+            <button id="advancedPanelReturnButton" class="primary" data-telemetry-id="return_button_adv">Retour (recommandé)</button>
+            <button class="primary try-again">Réessayer</button>
+            <div class="exceptionDialogButtonContainer">
+              <button id="exceptionDialogButton" data-telemetry-id="exception_button">Accepter le risque et poursuivre</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="blockingErrorReporting" class="advanced-panel">
+            <p class="toggle-container-with-text">
+                <input type="checkbox" id="automaticallyReportBlockingInFuture" role="checkbox" />
+                <label for="automaticallyReportBlockingInFuture">Signaler les erreurs similaires pour aider Mozilla à identifier et bloquer les sites malveillants</label>
+            </p>
+        </div>
+
+        <div id="certificateErrorDebugInformation" class="advanced-panel" hidden="">
+          <button id="copyToClipboardTop" data-telemetry-id="clipboard_button_top">Copier le texte dans le presse-papiers</button>
+          <div id="certificateErrorText"></div>
+          <button id="copyToClipboardBottom" data-telemetry-id="clipboard_button_bot">Copier le texte dans le presse-papiers</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="chrome://browser/content/certerror/aboutNetErrorCodes.js"></script>
+  <script type="module" src="chrome://browser/content/certerror/aboutNetError.js"></script>
+</html>
